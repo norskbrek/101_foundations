@@ -1,0 +1,36 @@
+en:
+  welcome: "Welcome to Calculator! Enter your name:"
+  valid_name: "Make sure to enter a valid name."
+  greeting1: "Hi, "
+  greeting2: "!"
+  first_num: "What's the first number?"
+  second_num: "What's the second number?"
+  not_valid: "Hmm, that doesn't look like a valid number..."
+  operator_prompt: "What operation would you like to perform?
+    \n1) add
+    \n2) subtract
+    \n3) multiply
+    \n4) divide"
+  choose: "Must choose 1, 2, 3, or 4."
+  operation: " the two numbers..."
+  result: "The result is: "
+  do_again: "Do you want to perform another calculation? (Y to calculate again)"
+  thanks: "Thank you for using the calculator!"
+nor:
+  welcome: "Velkommen til kalkulator! Tast inn navn din:"
+  valid_name: "Ikke glem å tast inn et gyldig navn."
+  greeting1: "Hei, "
+  greeting2: "!"
+  first_num: "Hva er det første nummeret?"
+  second_num: "Hva er det andre nummeret?"
+  not_valid: "Hmm...det er ikke et ekte nummer..."
+  operator_prompt: "Hilvken operasjon vil du gjerne utføre?
+    \n1) legg til
+    \n2) tekke fra
+    \n3) multiplisere
+    \n4) dele opp"
+  choose: "Velge fra 1, 2, 3, eller 4."
+  operation: " de to tallene..."
+  result: "Resultatet er: "
+  do_again: "Vil du utføre en annen beregning? (Y = Ja, N = Nei)"
+  thanks: "Takk for at du bruker kalulatoren!"
