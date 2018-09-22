@@ -1,0 +1,51 @@
+QUESTION 1.
+
+ages.include?("Spot")
+ages.has_key?("Spot")
+ages.member?("Spot")
+
+QUESTION 2.
+
+munsters_description.capitalize!
+munsters_description.swapcase!
+munsters_description.downcase!
+munsters_description.upcase!
+
+QUESTION 3.
+
+ages.merge!(additional_ages)
+
+QUESTION 4.
+
+advice.include?("Dino")
+advice.match("Dino")
+
+QUESTION 5.
+
+flintstones = %w(Fred Barney Wilma Betty BamBam Pebbles)
+
+QUESTION 6.
+
+flintstones << "Dino"
+flintstones.push("Dino")
+
+QUESTION 7.
+
+flintstones.push("Dino").push("Hoppy")
+flintstones.concat(%w(Dino Hoppy))
+
+QUESTION 8.
+
+advice.slice!(0..38)
+(Launch solution: advice.slice!(0, advice.index('house')))
+
+If you use #slice instead, the "sliced" portion is returned, but the original
+sentence remains in the "advice" variable.
+
+QUESTION 9.
+
+statement.count("t")
+
+QUESTION 10.
+
+title.center(40)

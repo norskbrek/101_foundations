@@ -1,0 +1,47 @@
+QUESTION 1.
+
+I expect 1, 2, 2, 3.
+#uniq does not mutate, so the numbers variable still points to the original array.
+
+QUESTION 2.
+
+! (the bang operator) is used to denote mutating methods, and to cause objects,
+like, for example, booleans, to return the opposite value.
+? is used in methods to check if the argument returns true or false after being
+passed into the method.
+
+!= means "not equal do", and is used in comparisons (i.e. x != y)
+! before something turns object into opposite of its boolean equivalent
+! after something is part of a method name (usually means method mutates caller)
+? before something is used in ternary operator (? :)
+? after something is part of a method name (usually checks truthiness of method caller)
+!! before something turns object into its boolean equivalent
+
+QUESTION 3.
+
+advice.gsub!("important", "urgent")
+
+QUESTION 4.
+
+numbers.delete_at(1) => deletes the object at array index [1] (in this case, 2)
+numbers.delete(1) => deletes the object 1, wherever it is in the array.
+
+QUESTION 5.
+
+(10..100).cover?(42)
+
+QUESTION 6.
+
+famous_words.insert(0, "Four score and ")
+famous_words.prepend("Four score and ")
+"Four score and " << famous_words
+
+QUESTION 7.
+
+=> 42
+
+QUESTION 8.
+
+flintstones.to_a[2]
+
+(Launch answer: flintstones.assoc("Barney"))

@@ -1,0 +1,83 @@
+QUESTION 1.
+
+10.times {|number| puts (" " * number) + "The Flintstones Rock!"}
+
+QUESTION 2.
+
+The equation (40 + 2) is not converted from integer to string.
+
+puts "the value of 40 + 2 is " + "#{40 + 2}" (string interpolation)
+puts "the value of 40 + 2 is " + (40 + 2).to_s (string conversion)
+
+QUESTION 3.
+
+def factors(number)
+  dividend = number
+  divisors = []
+
+  while dividend > 0 do
+    divisors << number / dividend if number % dividend == 0
+    dividend -= 1
+  end
+
+  divisors
+end
+
+number % dividend == 0 ==> This is the condition for a factor, which
+is defined as a number that can be divided into another number with no remainder.
+
+"divisors" returns the divisors array (returns last executed statement).
+
+QUESTION 4.
+
+The first method modifies the "buffer" argument.
+The second, doesn't.
+They both have the same return value.
+
+QUESTION 5.
+
+The "limit" variable is initialized outside the method -
+it is not available inside the method due to variable scope.
+I'd put initialize "limit" below the first line of the method.
+(OR - make "limit" an additional argument in the "fib" definition!)
+
+def fib(first_num, second_num)
+  limit = 15
+
+  while second_num < limit
+    sum = first_num + second_num
+    first_num = second_num
+    second_num = sum
+  end
+  sum
+end
+
+QUESTION 6.
+
+def tricky_method(a_string_param, an_array_param)
+  a_string_param += "rutabaga"
+  an_array_param += "rutabaga"
+
+  return a_string_param, an_array_param
+end
+
+my_string = "pumpkins"
+my_array = ["pumpkins"]
+my_string, my_array = tricky_method(my_string, my_array)
+
+QUESTION 7.
+
+34
+
+QUESTION 8.
+
+Yep! The "munsters" hash is not reassigned, so whatever changes occur in the
+method occur to the "munsters" hash as well.
+
+QUESTION 9.
+
+"paper"
+
+QUESTION 10.
+
+"no"
