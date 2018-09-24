@@ -1,0 +1,27 @@
+QUESTION 1.
+
+QUESTION 2.
+
+QUESTION 3.
+
+My string looks like this now: "pumpkins"
+My array looks like this now: ["pumpkins", "rutabaga"]
+
+The method mutates my_array by using the shovel operators,
+while my_string has "rutabaga" reassigned to it within
+the method, but it remains unchanged outside of the method.
+
+QUESTION 4.
+
+My string looks like this now: pumpkinsrutabaga
+My array looks like this now: ["pumpkins"]
+
+This time, my_string is modified by the #<< method, while
+my_array is simply reaasigned within the method (and remains
+the same outside the method.)
+
+QUESTION 5.
+
+def color_valid(color)
+  color == "blue" || color == "green"
+end
