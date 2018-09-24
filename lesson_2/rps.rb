@@ -13,9 +13,9 @@ def win?(first, second)
 end
 
 def display_results(player, computer)
-  if win?(player,computer)
+  if win?(player, computer)
     prompt("You won!")
-  elsif win?(computer,player)
+  elsif win?(computer, player)
     prompt("Computer won!")
   else
     prompt("It's a tie!")
@@ -28,6 +28,9 @@ loop do
     prompt("Choose one: #{VALID_CHOICES.join(', ')}")
     choice = Kernel.gets().chomp()
 
+    #break unless VALID_CHOICES.include?(choice)
+    #prompt("That's not a valid choice.")
+
     if VALID_CHOICES.include?(choice)
       break
     else
@@ -37,13 +40,14 @@ loop do
 
   computer_choice = VALID_CHOICES.sample
 
-  prompt("You chose: #{choice}; Computer chose #{computer_choice}.")
+  prompt("You chose: #{choice}; Computer chose: #{computer_choice}.")
 
   display_results(choice, computer_choice)
 
   prompt("Do you want to play again?")
   answer = Kernel.gets().chomp()
   break unless answer.downcase().start_with?('y')
+  system('clear') || system('cls')
 end
 
-prompt("Thank you for playing. Good bye!")
+prompt("Thank you for playing! Good bye!")
