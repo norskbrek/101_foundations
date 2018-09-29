@@ -1,0 +1,65 @@
+# Problem 1.
+
+=>[1, 2, 3]
+#select selects based on the truthiness of the block's return value.
+Since "hi" is truthy, the new returned array is the same as the old array.
+
+# Problem 2.
+
+=> 2
+#count returns the number of elements yielding a truthy value.
+Check the Ruby-Docs for the answer!
+
+# Problem 3.
+
+=> [1, 2, 3]
+#reject returns an array containing elements that the block returns false.
+It returns this array because puts returns nil, and none of these array items
+returns nil (since #reject selects the falsey values).
+
+# Problem 4.
+
+=> {'a' => 'ant', 'b' => 'bear', 'c' => 'cat'}
+The object {} is an argument; the original array is iterated over, and the
+updated value is returned after each iteration.
+
+# Problem 5.
+
+=> [a:, 'ant']
+#shift (according the the Hash#shift entry in Ruby Docs) removes the first
+key-value pair and returns it as a two-item array.
+
+# Problem 6.
+
+=> 11
+Array#pop removes the last item in an array, then chaining Array#size onto that
+returns the size of the item (in this case 'caterpillar'.size = 11).
+
+# Problem 7.
+
+=> true
+#odd? is the last evaluated expression, and it returns the boolean values
+of the items in the array. #any? also returns the truthiness value, which in
+this case is => true. Since #any stops iterating after one truty instance,
+the block also returns => true.
+
+# Problem 8.
+
+=> [1, 2]
+#take returns the first n elements in an array.
+#take is not destructive, which you can discover by testing the method out
+in irb! (Or read the documentation!)
+
+# Problem 9.
+
+=> [nil, 'bear']
+Hash#map iterates over the hash and returns a new array containing the results
+of the arguments passed into the code block. In this case, it returns nil for
+the first item since 'ant' returns false, while 'bear' returns true.
+
+# Problem 10.
+
+=> [1, nil nil]
+Since the first element evaluates to false, then num is the return value for
+that iteration. The other elements evaluate to true, and thus "puts num" is
+the last statement evaluated, and that returns nil.
