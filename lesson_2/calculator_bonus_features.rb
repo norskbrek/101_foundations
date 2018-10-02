@@ -6,9 +6,9 @@ def messages(message_key, lang='en')
   MESSAGES[lang][message_key]
 end
 
-def prompt(message_key, input='')
+def prompt(message_key, optional_param='')
   message = messages(message_key, LANGUAGE)
-  puts "=> #{message}#{input}"
+  puts "=> #{message}#{optional_param}"
 end
 
 def integer?(input)
