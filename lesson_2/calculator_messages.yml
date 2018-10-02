@@ -1,5 +1,5 @@
 en:
-  welcome: "Welcome to Calculator!"
+  welcome: "Welcome to the Calculator!"
   enter_name: "Please enter your name: "
   invalid_name: "Be sure to enter a valid name..."
   greet_user: "Hello, "
@@ -19,7 +19,7 @@ en:
   dividing: "dividing..."
   operation_result: "The result is: "
   calculate_again: "Do you want to perform another calculation? (Enter Y to calculate again)"
-  thank_user: "Thank you for using the calculator!"
+  thank_user: "Thank you for using the Calculator!"
 nor:
   welcome: "Velkommen til kalkulator!"
   enter_name: "Tast inn navn din: "
