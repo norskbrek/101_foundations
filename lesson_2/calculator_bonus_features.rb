@@ -6,8 +6,8 @@ def messages(message_key, lang='en')
   MESSAGES[lang][message_key]
 end
 
-def prompt(key, input='')
-  message = messages(key, LANGUAGE)
+def prompt(message_key, input='')
+  message = messages(message_key, LANGUAGE)
   puts "=> #{message}#{input}"
 end
 
