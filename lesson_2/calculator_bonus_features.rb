@@ -1,15 +1,14 @@
 require 'yaml'
-require 'pry'
 MESSAGES = YAML.load_file('calculator_messages.yml')
 LANGUAGE = 'en'
 
-def messages(message, lang='en')
-  MESSAGES[lang][message]
+def messages(message_key, lang='en')
+  MESSAGES[lang][message_key]
 end
 
-def prompt(key, user_input='')
+def prompt(key, input='')
   message = messages(key, LANGUAGE)
-  puts "=> #{message} #{user_input}"
+  puts "=> #{message}#{input}"
 end
 
 def integer?(input)
@@ -20,62 +19,58 @@ def float?(input)
   input.to_f.to_s == input
 end
 
-def number?(input)
+def valid_number?(input)
   integer?(input) || float?(input)
 end
 
 def operation_to_message(op)
   case op
-  when '1'
-    'adding...'
-  when '2'
-    'subtracting...'
-  when '3'
-    'multiplying...'
-  when '4'
-    'dividing...'
+  when '1' then messages('adding', LANGUAGE)
+  when '2' then messages('subtracting', LANGUAGE)
+  when '3' then messages('multiplying', LANGUAGE)
+  when '4' then messages('dividing', LANGUAGE)
   end
 end
 
 prompt('welcome')
+prompt('enter_name')
 
 name = ''
 loop do
-  name = gets.chomp.capitalize
+  name = gets.chomp.strip.capitalize
 
   if name.empty? || name.strip == ''
-    prompt('valid_name')
+    prompt('invalid_name')
   else
     break
   end
   name
 end
 
-# binding.pry
-prompt('greeting', name)
+prompt('greet_user', name)
 
 loop do # main loop
   number1 = ''
   loop do
-    prompt('first_num')
+    prompt('number_1')
     number1 = gets.chomp
 
-    if number?(number1)
+    if valid_number?(number1)
       break
     else
-      prompt('not_valid')
+      prompt('invalid_number')
     end
   end
 
   number2 = ''
   loop do
-    prompt('second_num')
+    prompt('number_2')
     number2 = gets.chomp
 
-    if number?(number2)
+    if valid_number?(number2)
       break
     else
-      prompt('not_valid')
+      prompt('invalid_number')
     end
   end
 
@@ -88,11 +83,11 @@ loop do # main loop
     if %w(1 2 3 4).include?(operator)
       break
     else
-      prompt('must_choose')
+      prompt('invalid_choice')
     end
   end
 
-  prompt('operation', operation_to_message(operator))
+  prompt('operation_status', operation_to_message(operator))
 
   result = case operator
            when '1'
@@ -105,12 +100,12 @@ loop do # main loop
              (number1.to_f / number2.to_f).round(2)
            end
 
-  prompt('result', result)
+  prompt('operation_result', result)
 
-  prompt('do_again')
+  prompt('calculate_again')
   answer = gets.chomp
   break unless answer.downcase == 'y'
   system('clear') || system('cls')
 end
 
-prompt('thanks')
+prompt('thank_user')
